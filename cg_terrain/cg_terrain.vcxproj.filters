@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="glad.c">
+      <Filter>Resources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="material.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="object.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="particle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="particleSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="primitives.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="text.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="texture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vertex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="framebuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="white.jpg">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="water.bmp">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="sky0.bmp">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="sky1.bmp">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="sky2.bmp">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="sky3.bmp">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="sky4.bmp">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="terrain.bmp">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="waterDUDV.png">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="terrainHeight.bmp">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="terrainDetail.bmp">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="waterNormals.png">
+      <Filter>Resources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="main.frag.glsl">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="main.tcs.glsl">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="main.tes.glsl">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="main.vert.glsl">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="part.frag.glsl">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="part.vert.glsl">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="text.frag.glsl">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="text.vert.glsl">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="water.vert.glsl">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="terrain.frag.glsl">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="water.frag.glsl">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="simple.frag.glsl">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="simple.vert.glsl">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="watersimple.vert.glsl">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="watersimple.frag.glsl">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="gui.frag.glsl">
+      <Filter>Shader Files</Filter>
+    </None>
+    <None Include="gui.vert.glsl">
+      <Filter>Shader Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{61fd3eac-a1ab-4440-842a-212792713bea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{96ecf571-6f15-42ff-8519-6f919163896c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{fee6bc9c-f74f-409a-8c03-1f2acbb02294}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader Files">
+      <UniqueIdentifier>{8fe1e3e4-6929-42b3-b6e4-3b12c80bd1bf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
