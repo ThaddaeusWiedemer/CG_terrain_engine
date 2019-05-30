@@ -126,8 +126,6 @@ int main(){
 	Material* materialTerrain = new Material(glm::vec3(.5f), glm::vec3(.8f), glm::vec3(0.f));
 
 	// Framebuffer
-	// TODO why does the position of this snippet before or after the terrain creation matter?
-	// was related to the non-proper handling of detail texture, should be fine now
 	Framebuffer fboTexture;
 	fboTexture.GenerateFBO(WIDTH, HEIGHT);
 	Framebuffer fboDepth;
@@ -217,17 +215,6 @@ int main(){
 		if(cooldown < 0)
 			cooldown = 0;
 		DoMovement(cooldown);
-
-		// Apply keyboard rotation
-		for(Object* obj : skybox){
-			obj->rotate(rot_quat);
-		}
-		for(Object* obj : reflectionSky){
-			obj->rotate(rot_quat);
-		}
-		water.rotate(rot_quat);
-		terrain.rotate(rot_quat);
-		reflectionTerrain.rotate(rot_quat);
 		
 		// transformation matrices
 		glm::mat4 view(1);
@@ -440,25 +427,6 @@ void DoMovement(GLfloat &cooldown){
 	camera.Move(FORWARD, deltaTime * camera_x);
 	camera.Move(UP, deltaTime * camera_y);
 	camera.Move(LEFT, deltaTime * camera_z);
-	// Camera rotations
-	if(keys[GLFW_KEY_R]){
-		rot_quat = glm::rotate(rot_quat, rot_speed * deltaTime, glm::vec3(1, 0, 0));
-	}
-	if(keys[GLFW_KEY_F]){
-		rot_quat = glm::rotate(rot_quat, -rot_speed * deltaTime, glm::vec3(1, 0, 0));
-	}
-	if(keys[GLFW_KEY_T]){
-		rot_quat = glm::rotate(rot_quat, rot_speed * deltaTime, glm::vec3(0, 1, 0));
-	}
-	if(keys[GLFW_KEY_G]){
-		rot_quat = glm::rotate(rot_quat, -rot_speed * deltaTime, glm::vec3(0, 1, 0));
-	}
-	if(keys[GLFW_KEY_Y]){
-		rot_quat = glm::rotate(rot_quat, rot_speed * deltaTime, glm::vec3(0, 0, 1));
-	}
-	if(keys[GLFW_KEY_H]){
-		rot_quat = glm::rotate(rot_quat, -rot_speed * deltaTime, glm::vec3(0, 0, 1));
-	}
 	// reset
 	if(keys[GLFW_KEY_Z]){
 		camera.ResetPosition();
