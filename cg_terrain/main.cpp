@@ -63,13 +63,17 @@ GLfloat lastFrame = 0.f;      // Time of last frame
 GLfloat rot_speed = 3.f;
 glm::quat rot_quat = glm::angleAxis(0.f, glm::vec3(1, 0, 0));
 
-// Tesselation
+// water controls
 GLfloat waveSize = 10.f;
 bool simpleModel = false;
 bool showGui = false;
 bool highlights = true;
 GLuint fresnel = 1;
 GLuint edge = 1;
+
+// framebuffer objects
+Framebuffer fboTexture;
+Framebuffer fboDepth;
 
 // The MAIN function, from here we start the application and run the game loop
 int main(){
@@ -125,10 +129,8 @@ int main(){
 	Material* materialWater = new Material(glm::vec3(0.f), glm::vec3(0.f), glm::vec3(1.f));
 	Material* materialTerrain = new Material(glm::vec3(.5f), glm::vec3(.8f), glm::vec3(0.f));
 
-	// Framebuffer
-	Framebuffer fboTexture;
+	// framebuffer objects
 	fboTexture.GenerateFBO(WIDTH, HEIGHT);
-	Framebuffer fboDepth;
 	fboDepth.GenerateFBO(WIDTH, HEIGHT);
 
 	// Set up vertex data (and buffer(s)) and attribute pointers
@@ -374,6 +376,8 @@ void FramebufferSizeCallback(GLFWwindow* window, int width, int height){
 	WIDTH = width;
 	HEIGHT = height;
 	glViewport(0, 0, width, height);
+	fboTexture.resize(WIDTH, HEIGHT);
+	fboDepth.resize(WIDTH, HEIGHT);
 }
 
 // Is called whenever a key is pressed/released via GLFW
